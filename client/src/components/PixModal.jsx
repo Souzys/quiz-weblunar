@@ -246,18 +246,6 @@ export default function PixModal({
               <ShieldCheck className="w-4 h-4" />
               <span>Pagamento 100% Criptografado via Mercado Pago</span>
             </div>
-
-            {/* MODO DEV: Botão de Simulação de Pagamento */}
-            <div className="mt-3 pt-2 border-t border-dashed border-violet-900/50 text-center">
-              <button
-                onClick={handleSimulate}
-                disabled={simulating}
-                className="text-xs text-violet-400 hover:text-violet-300 underline inline-flex items-center gap-1 font-medium"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                {simulating ? 'Simulando aprovação...' : '[DEV] Simular Pagamento Aprovado'}
-              </button>
-            </div>
           </div>
         )}
 
