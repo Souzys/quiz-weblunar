@@ -118,7 +118,6 @@ export default function App() {
       {currentScreen === 'landing' && (
         <LandingScreen
           onStart={handleStart}
-          onOpenRecovery={() => setIsRecoveryModalOpen(true)}
         />
       )}
 

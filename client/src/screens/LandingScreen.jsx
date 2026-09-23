@@ -86,15 +86,9 @@ export default function LandingScreen({ onStart, onOpenRecovery }) {
         </div>
       </header>
 
-      {/* Rodapé com link de recuperação discreto */}
+      {/* Rodapé institucional limpo */}
       <footer className="text-center pt-8 pb-4 text-xs text-slate-500">
-        <p className="mb-2">© WebLunar. Todos os direitos reservados.</p>
-        <button
-          onClick={onOpenRecovery}
-          className="text-slate-400 hover:text-violet-300 underline transition-colors"
-        >
-          Já realizou o teste e perdeu sua página? Recuperar Dossiê
-        </button>
+        <p>© WebLunar. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
