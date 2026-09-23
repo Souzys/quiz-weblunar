@@ -8,6 +8,7 @@ import PixModal from './components/PixModal.jsx';
 import RecoveryModal from './components/RecoveryModal.jsx';
 import { api } from './services/api.js';
 import { listenPaymentStatus } from './services/sseClient.js';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('landing');
@@ -169,6 +170,9 @@ export default function App() {
           loadDossier(recId);
         }}
       />
+
+      {/* Vercel Analytics para monitoramento de visitas em tempo real */}
+      <Analytics />
     </div>
   );
 }
