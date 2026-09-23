@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Variáveis de Ambiente & Segredos (CRUCIAL: Nunca subir para o GitHub!)
+.env
+.env.*
+!.env.example
+
+# Builds e arquivos temporários
+dist/
+build/
+*.log
+*.tmp
+*.pdf
+test-*.js
+test-*.mjs
+test-mp-pix.js
+test-mail-with-pdf.js
+
+# Banco de dados local de desenvolvimento
+quiz_local_db.json
+server/quiz_local_db.json
+
+# Sistema operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

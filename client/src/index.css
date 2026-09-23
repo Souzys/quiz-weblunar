@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0D0E1F;
+  color: #f1f5f9;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar customizada e moderna */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0E1F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e214a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d326f;
+}
+
+/* =======================================================
+   ESTILOS DE IMPRESSÃO A4 (SIMETRIA MILIMÉTRICA E SANGRIA)
+   ======================================================= */
+@page {
+  size: A4 portrait;
+  margin: 0 !important;
+}
+
+@media print {
+  /* Força navegadores (Chrome, Edge, Safari) a imprimir fundos escuros e cores exatas */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Remove o canvas de confetes do PDF */
+  canvas {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  html, body, #root {
+    background-color: #0D0E1F !important;
+    color: #f8fafc !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    overflow: visible !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset total do container na impressão */
+  .dossier-wrapper {
+    max-width: 210mm !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    space-y: 0 !important;
+  }
+
+  /* Cada página preenche 1 folha A4 com alinhamento 100% simétrico */
+  .print-page, .print-page-last {
+    width: 210mm !important;
+    max-width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 16mm 18mm !important; /* 18mm simétrico esquerda e direita */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    background-color: #12142E !important;
+    border-radius: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+  }
+
+  .print-page {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .print-page-last {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  .page-break-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
