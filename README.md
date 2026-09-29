@@ -1,4 +1,4 @@
-# 🔮 Quiz de Alta Conversão (R$ 4,99)
+# 🔮 Quiz de Alta Conversão
 
 > **Chamada Oficial:**  
 > *"Descubra como as pessoas realmente te enxergam (e o traço oculto que você projeta sem perceber)"*
